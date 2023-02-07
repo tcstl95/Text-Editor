@@ -25,8 +25,8 @@ module.exports = () => {
         
       }),
       new InjectManifest({ 
-        swSrc: './src/js/sw.js',
-        swDest: 'sw.js',
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
 
       }),
       new WebpackPwaManifest({
@@ -39,7 +39,7 @@ module.exports = () => {
         display: 'standalone',
         icons: [
           {
-            src: path.resolve('src/img/logo.png'),
+            src: path.resolve('src/img/jateLogo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination : path.join('assets, icons'),
           },
@@ -63,7 +63,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-class-properties']
+              plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime']
             },
           },
         }
