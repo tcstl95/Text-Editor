@@ -18,7 +18,7 @@ console.log('Post to the database');
 const dbJates = await openDB('jate', 1);
 const tx = dbJates.transaction('jate', 'readwrite');
 const store = tx.objectStore('jate');
-const request = store.put({id: 1, value: content}); 
+const request = store.put({id: 1, value: content});
 const result = await request;
 console.log('By god you did it, data saved to the database ', result);
 };
