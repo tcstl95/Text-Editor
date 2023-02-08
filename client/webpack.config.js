@@ -30,13 +30,15 @@ module.exports = () => {
 
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject:true,
         name: 'JATE',
         short_name: 'JATE',
         description: 'JATE',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
-        display: 'standalone',
+        publicPath:'/',
         icons: [
           {
             src: path.resolve('src/img/jateLogo.png'),
