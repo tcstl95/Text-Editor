@@ -41,7 +41,7 @@ module.exports = () => {
         publicPath:'/',
         icons: [
           {
-            src: path.resolve('src/img/jateLogo.png'),
+            src: path.resolve('src/img/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination : path.join('assets, icons'),
           },
